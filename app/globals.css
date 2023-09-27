@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.products_container {
+  margin-left: 5px;
+  margin-left: 5px;
+}
+.image_carousel {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.products_card {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.products_card_box {
+  padding: 5px;
+}
