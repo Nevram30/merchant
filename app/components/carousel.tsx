@@ -20,7 +20,7 @@ const carousel = (props: Props) => {
         <div id="item2" className="carousel-item w-full">
           <Image
             alt="shoes"
-            src="/product-2.jpg"
+            src="/product-1.jpg"
             className="w-full h-72 object-cover"
             width={600}
             height={600}
@@ -29,7 +29,7 @@ const carousel = (props: Props) => {
         <div id="item3" className="carousel-item w-full">
           <Image
             alt="shoes"
-            src="/product-3.jpg"
+            src="/product-1.jpg"
             className="w-full h-72 object-cover"
             width={600}
             height={600}

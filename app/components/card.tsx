@@ -6,7 +6,7 @@ type Props = {};
 
 const card = (props: Props) => {
   return (
-    <div className="card w-80 bg-base-100 shadow-xl">
+    <div className="w-80 bg-base-100 shadow-xl">
       <figure>
         <Image
           alt="shoes"
