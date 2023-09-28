@@ -20,7 +20,7 @@ const navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 drop-shadow-lg">
       <div className="navbar-start">
         <a className="btn btn-ghost normal-case text-xl">Merchant</a>
       </div>
