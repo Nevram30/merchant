@@ -23,7 +23,6 @@ const inputSearch: React.FC<SearchInputProps> = ({ onSearch }) => {
           placeholder="Type here"
           className="input input-bordered w-full max-w-xs"
         />
-        <button onClick={handleSearch}>Search</button>
       </div>
     </>
   );

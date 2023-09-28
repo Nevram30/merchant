@@ -56,8 +56,9 @@ const navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Merchant</a>
       </div>
       <div className="navbar-end">
-        <div>
-          <span onClick={handleSearchIconClick}>
+        <div className="flex">
+          {isSearchVisible && <InputSearch onSearch={handleSearch} />}
+          <span className="flex" onClick={handleSearchIconClick}>
             <button
               className="btn btn-ghost btn-circle"
               onClick={handleSearchIconClick}
@@ -78,7 +79,6 @@ const navbar = () => {
               </svg>
             </button>
           </span>
-          {isSearchVisible && <InputSearch onSearch={handleSearch} />}
         </div>
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
