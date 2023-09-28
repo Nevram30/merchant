@@ -1,7 +1,9 @@
 import Navbar from "@/app/components/navbar";
 import Card from "@/app/components/card";
 import Carousel from "@/app/components/carousel";
-import Subnavbar from "./components/subnavbar";
+import Subnavbar from "@/app/components/subnavbar";
+import Footer from "@/app/components/footer";
+import Multiplebuttons from "@/app/components/multiplebuttons";
 
 export default function Home() {
   return (
@@ -37,6 +39,10 @@ export default function Home() {
           <Card />
         </div>
       </section>
+      <div>
+        <Multiplebuttons />
+      </div>
+      <Footer />
     </main>
   );
 }

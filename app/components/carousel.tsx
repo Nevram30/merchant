@@ -7,12 +7,12 @@ type Props = {};
 const carousel = (props: Props) => {
   return (
     <>
-      <div className="carousel w-full">
+      <div className="carousel h-96 w-full">
         <div id="item1" className="carousel-item w-full">
           <Image
             alt="shoes"
             src="/product-1.jpg"
-            className="w-full h-72 object-cover"
+            className="w-full h-96 object-cover"
             width={600}
             height={600}
           />
@@ -21,7 +21,7 @@ const carousel = (props: Props) => {
           <Image
             alt="shoes"
             src="/product-1.jpg"
-            className="w-full h-72 object-cover"
+            className="w-full h-96 object-cover"
             width={600}
             height={600}
           />
@@ -30,7 +30,7 @@ const carousel = (props: Props) => {
           <Image
             alt="shoes"
             src="/product-1.jpg"
-            className="w-full h-72 object-cover"
+            className="w-full h-96 object-cover"
             width={600}
             height={600}
           />
@@ -39,7 +39,7 @@ const carousel = (props: Props) => {
           <Image
             alt="shoes"
             src="/product-1.jpg"
-            className="w-full h-72 object-cover"
+            className="w-full h-96 object-cover"
             width={600}
             height={600}
           />
