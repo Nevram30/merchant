@@ -7,57 +7,115 @@ type Props = {};
 const carousel = (props: Props) => {
   return (
     <>
-      <div className="carousel h-96 w-full">
-        <div id="item1" className="carousel-item w-full">
-          <Image
-            alt="shoes"
-            src="/product-1.jpg"
-            className="w-full h-96 object-cover"
-            width={600}
-            height={600}
-          />
+      <div className="flex">
+        <div>
+          <div className="carousel carousel-center max-w-lg p-4 space-x-4">
+            <div id="item1" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item2" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item3" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item4" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+          </div>
+          <div className="flex justify-center w-full py-2 gap-2">
+            <a href="#item1" className="btn btn-xs">
+              1
+            </a>
+            <a href="#item2" className="btn btn-xs">
+              2
+            </a>
+            <a href="#item3" className="btn btn-xs">
+              3
+            </a>
+            <a href="#item4" className="btn btn-xs">
+              4
+            </a>
+          </div>
         </div>
-        <div id="item2" className="carousel-item w-full">
-          <Image
-            alt="shoes"
-            src="/product-1.jpg"
-            className="w-full h-96 object-cover"
-            width={600}
-            height={600}
-          />
+        <div>
+          <div className="carousel carousel-center p-4 space-x-4">
+            <div id="item1" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item2" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item3" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div id="item4" className="carousel-item w-full">
+              <Image
+                alt="shoes"
+                src="/product-1.jpg"
+                className="w-full h-96 object-cover"
+                width={600}
+                height={600}
+              />
+            </div>
+          </div>
+          <div className="flex justify-center w-full py-2 gap-2">
+            <a href="#item1" className="btn btn-xs">
+              1
+            </a>
+            <a href="#item2" className="btn btn-xs">
+              2
+            </a>
+            <a href="#item3" className="btn btn-xs">
+              3
+            </a>
+            <a href="#item4" className="btn btn-xs">
+              4
+            </a>
+          </div>
         </div>
-        <div id="item3" className="carousel-item w-full">
-          <Image
-            alt="shoes"
-            src="/product-1.jpg"
-            className="w-full h-96 object-cover"
-            width={600}
-            height={600}
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <Image
-            alt="shoes"
-            src="/product-1.jpg"
-            className="w-full h-96 object-cover"
-            width={600}
-            height={600}
-          />
-        </div>
-      </div>
-      <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-        <a href="#item4" className="btn btn-xs">
-          4
-        </a>
       </div>
     </>
   );

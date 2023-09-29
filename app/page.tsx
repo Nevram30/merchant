@@ -10,8 +10,10 @@ export default function Home() {
     <main>
       <Navbar />
       <Subnavbar />
-      <div className="image_carousel">
-        <Carousel />
+      <div>
+        <div className="">
+          <Carousel />
+        </div>
       </div>
       <section className="products_container px-5">
         <div className="products_card space-x-3">
