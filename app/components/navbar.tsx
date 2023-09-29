@@ -41,7 +41,7 @@ const navbar = () => {
                   </div>
                   ENG
                 </summary>
-                <ul className="p-2 z-10">
+                <ul className="p-2">
                   <li>
                     <a>Sell</a>
                   </li>
@@ -54,7 +54,7 @@ const navbar = () => {
             <li tabIndex={0}>
               <details>
                 <summary>Account List</summary>
-                <ul className="p-2 z-10">
+                <ul className="p-2  ">
                   <li>
                     <a>Sell</a>
                   </li>
