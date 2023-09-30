@@ -6,32 +6,32 @@ type Props = {};
 const categories = (props: Props) => {
   return (
     <div className="box justify-center text-center space-x-9 my-24">
-      <button className="btn btn-active h-20">
+      <button className="btn btn-active h-28">
         <div className="m-0">
-          <div className="px-8">
+          <div className="px-10 mt-2">
             <Image
               alt="shoes"
-              src="/united-states.png"
+              src="/coin.png"
               className="object-cover"
-              width={20}
-              height={20}
+              width={50}
+              height={50}
             />
           </div>
-          <p className="pt-2">Coins</p>
+          <p className="py-5">Coins</p>
         </div>
       </button>
-      <button className="btn btn-active h-20">
+      <button className="btn btn-active h-28">
         <div className="m-0">
           <div className="px-10">
             <Image
               alt="shoes"
-              src="/united-states.png"
+              src="/online-shopping.png"
               className="object-cover"
-              width={20}
-              height={20}
+              width={50}
+              height={50}
             />
           </div>
-          <p className="pt-2">Merchant Mall</p>
+          <p className="py-5">Merchant Mall</p>
         </div>
       </button>
       <button className="btn btn-active h-20">
