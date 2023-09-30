@@ -8,6 +8,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.btn {
+  text-transform: none;
+}
+
 .image_carousel {
   margin-top: 10px;
   margin-bottom: 10px;
