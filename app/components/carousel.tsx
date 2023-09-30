@@ -8,12 +8,12 @@ const carousel = (props: Props) => {
   return (
     <>
       <div className="flex">
-        <div className="w-[1500px]">
+        <div className="w-[1200px]">
           <div className="carousel carousel-center max-w-lg p-4 space-x-4">
             <div id="item1" className="carousel-item w-full">
               <Image
                 alt="shoes"
-                src="/product-1.jpg"
+                src="/product-13.jpg"
                 className="w-full h-96 object-cover"
                 width={600}
                 height={600}
@@ -67,7 +67,7 @@ const carousel = (props: Props) => {
             <div id="item1" className="carousel-item w-full">
               <Image
                 alt="shoes"
-                src="/product-1.jpg"
+                src="/product-9.jpg"
                 className="w-full h-96 object-cover"
                 width={600}
                 height={600}
