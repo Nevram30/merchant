@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <Subnavbar />
       <div>
-        <div className="">
+        <div>
           <Carousel />
         </div>
       </div>
@@ -20,28 +20,7 @@ export default function Home() {
         <Categories />
       </div>
       <section className="products_container px-5">
-        <div className="products_card space-x-3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className="products_card space-x-3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className="products_card space-x-3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className="products_card space-x-3">
-          <Card />
-          <Card />
-          <Card />
+        <div className="products_card space-x-3 justify-center text-center">
           <Card />
         </div>
       </section>

@@ -43,7 +43,7 @@ const categoriesData: Category[] = [
 
 const Categories = () => {
   return (
-    <div className="box justify-center text-center space-x-9 my-24">
+    <div className="justify-center text-center space-x-9 my-24">
       {categoriesData.map((category) => (
         <button key={category.id} className="btn btn-active h-28">
           <div className="m-0">
