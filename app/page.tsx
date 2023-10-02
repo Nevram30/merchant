@@ -19,10 +19,8 @@ export default function Home() {
       <div>
         <Categories />
       </div>
-      <section className="products_container px-5">
-        <div className="products_card space-x-3 justify-center text-center">
-          <Card />
-        </div>
+      <section>
+        <Card />
       </section>
       <div>
         <Multiplebuttons />
