@@ -1,83 +1,69 @@
 import React from "react";
 import Image from "next/image";
 
-type Props = {};
+type Category = {
+  id: string;
+  name: string;
+  icon: string;
+  width: number;
+  height: number;
+};
 
-const categories = (props: Props) => {
+const categoriesData: Category[] = [
+  { id: "coins", name: "Coins", icon: "/coin.png", width: 50, height: 50 },
+  {
+    id: "merchantMall",
+    name: "Merchant Mall",
+    icon: "/online-shopping.png",
+    width: 50,
+    height: 50,
+  },
+  {
+    id: "claimVouchers",
+    name: "Claim Vouchers",
+    icon: "/united-states.png",
+    width: 20,
+    height: 20,
+  },
+  {
+    id: "promos",
+    name: "Promos",
+    icon: "/united-states.png",
+    width: 20,
+    height: 20,
+  },
+  {
+    id: "freshSales",
+    name: "Fresh Sales",
+    icon: "/united-states.png",
+    width: 20,
+    height: 20,
+  },
+];
+
+const Categories = () => {
   return (
     <div className="box justify-center text-center space-x-9 my-24">
-      <button className="btn btn-active h-28">
-        <div className="m-0">
-          <div className="px-10 mt-2">
-            <Image
-              alt="shoes"
-              src="/coin.png"
-              className="object-cover"
-              width={50}
-              height={50}
-            />
+      {categoriesData.map((category) => (
+        <button key={category.id} className="btn btn-active h-28">
+          <div className="m-0">
+            <div className={`px-${category.width === 20 ? 12 : 10}`}>
+              <Image
+                alt={category.name}
+                src={category.icon}
+                className="object-cover"
+                width={category.width}
+                height={category.height}
+              />
+            </div>
+            <p className={`py-${category.height === 20 ? 2 : 5}`}>
+              {category.name}
+            </p>
           </div>
-          <p className="py-5">Coins</p>
-        </div>
-      </button>
-      <button className="btn btn-active h-28">
-        <div className="m-0">
-          <div className="px-10">
-            <Image
-              alt="shoes"
-              src="/online-shopping.png"
-              className="object-cover"
-              width={50}
-              height={50}
-            />
-          </div>
-          <p className="py-5">Merchant Mall</p>
-        </div>
-      </button>
-      <button className="btn btn-active h-20">
-        <div className="m-0">
-          <div className="box px-12">
-            <Image
-              alt="shoes"
-              src="/united-states.png"
-              className="object-cover"
-              width={20}
-              height={20}
-            />
-          </div>
-          <p className="pt-2">Claim Vouchers</p>
-        </div>
-      </button>
-      <button className="btn btn-active h-20">
-        <div className="m-0">
-          <div className="px-8">
-            <Image
-              alt="shoes"
-              src="/united-states.png"
-              className="object-cover"
-              width={20}
-              height={20}
-            />
-          </div>
-          <p className="pt-2">Promos</p>
-        </div>
-      </button>
-      <button className="btn btn-active h-20">
-        <div className="m-0">
-          <div className="px-8">
-            <Image
-              alt="shoes"
-              src="/united-states.png"
-              className="object-cover"
-              width={20}
-              height={20}
-            />
-          </div>
-          <p className="pt-2">Fresh Sales</p>
-        </div>
-      </button>
+        </button>
+      ))}
     </div>
   );
 };
 
-export default categories;
+export default Categories;
