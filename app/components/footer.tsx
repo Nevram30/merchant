@@ -43,6 +43,9 @@ const footer = (props: Props) => {
           </div>
         </fieldset>
       </form>
+      <div>
+        © 2021 Copyright: <strong>Merchant</strong>. All Rights Reserved.
+      </div>
     </footer>
   );
 };
