@@ -5,6 +5,7 @@ import Subnavbar from "@/app/components/subnavbar";
 import Footer from "@/app/components/footer";
 import Multiplebuttons from "@/app/components/multiplebuttons";
 import Categories from "@/app/components/categories";
+import ProdCategories from "@/app/components/prodCategories";
 
 export default function Home() {
   return (
@@ -21,10 +22,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div>
-        <Categories />
-      </div>
+      <section>
+        <div>
+          <Categories />
+        </div>
+        <div>
+          <ProdCategories />
+        </div>
+      </section>
       <section>
         <Card />
       </section>
