@@ -21,23 +21,23 @@ const categoriesData: Category[] = [
   {
     id: "claimVouchers",
     name: "Claim Vouchers",
-    icon: "/united-states.png",
-    width: 20,
-    height: 20,
+    icon: "/voucher.png",
+    width: 50,
+    height: 50,
   },
   {
     id: "promos",
     name: "Promos",
-    icon: "/united-states.png",
-    width: 20,
-    height: 20,
+    icon: "/promo.png",
+    width: 50,
+    height: 50,
   },
   {
     id: "freshSales",
     name: "Fresh Sales",
-    icon: "/united-states.png",
-    width: 20,
-    height: 20,
+    icon: "/sale-tag.png",
+    width: 50,
+    height: 50,
   },
 ];
 
@@ -46,20 +46,16 @@ const Categories = () => {
     <div className="justify-center text-center space-x-9 my-24">
       {categoriesData.map((category) => (
         <button key={category.id} className="btn btn-active h-28">
-          <div className="m-0">
-            <div className={`px-${category.width === 20 ? 12 : 10}`}>
-              <Image
-                alt={category.name}
-                src={category.icon}
-                className="object-cover"
-                width={category.width}
-                height={category.height}
-              />
-            </div>
-            <p className={`py-${category.height === 20 ? 2 : 5}`}>
-              {category.name}
-            </p>
+          <div>
+            <Image
+              alt={category.name}
+              src={category.icon}
+              className="object-cover"
+              width={category.width}
+              height={category.height}
+            />
           </div>
+          <p>{category.name}</p>
         </button>
       ))}
     </div>
