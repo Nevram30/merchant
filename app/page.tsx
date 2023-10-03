@@ -9,13 +9,19 @@ import Categories from "@/app/components/categories";
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <Subnavbar />
-      <div>
+      <section>
+        <Navbar />
+        <Subnavbar />
+      </section>
+      <section>
         <div>
-          <Carousel />
+          <div className="flex">
+            <Carousel />
+            <Carousel />
+          </div>
         </div>
-      </div>
+      </section>
+
       <div>
         <Categories />
       </div>

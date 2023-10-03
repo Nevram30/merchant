@@ -1,124 +1,74 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-type Props = {};
+type CarouselItem = {
+  id: string;
+  image: string;
+  alt: string;
+};
 
-const carousel = (props: Props) => {
+const carouselData: CarouselItem[] = [
+  { id: "item1", image: "/product-13.jpg", alt: "Shoes 1" },
+  { id: "item2", image: "/product-1.jpg", alt: "Shoes 2" },
+  { id: "item3", image: "/product-1.jpg", alt: "Shoes 3" },
+  { id: "item4", image: "/product-1.jpg", alt: "Shoes 4" },
+];
+
+const Carousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % carouselData.length);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 5000); // Change 5000 to your desired autoplay interval
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, [activeIndex]);
+
   return (
     <>
       <div className="flex">
-        <div className="w-[1200px]">
-          <div className="carousel carousel-center max-w-lg p-4 space-x-4">
-            <div id="item1" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-13.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item2" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item3" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item4" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-          </div>
-          <div className="flex justify-center w-full py-2 gap-2">
-            <a href="#item1" className="btn btn-xs">
-              1
-            </a>
-            <a href="#item2" className="btn btn-xs">
-              2
-            </a>
-            <a href="#item3" className="btn btn-xs">
-              3
-            </a>
-            <a href="#item4" className="btn btn-xs">
-              4
-            </a>
-          </div>
-        </div>
-        <div>
+        <div className="w-full">
           <div className="carousel carousel-center p-4 space-x-4">
-            <div id="item1" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-9.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item2" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item3" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
-            <div id="item4" className="carousel-item w-full">
-              <Image
-                alt="shoes"
-                src="/product-1.jpg"
-                className="w-full h-96 object-cover"
-                width={600}
-                height={600}
-              />
-            </div>
+            {carouselData.map((item, index) => (
+              <div
+                key={item.id}
+                className={`carousel-item w-full ${
+                  index === activeIndex ? "active" : ""
+                }`}
+              >
+                <Image
+                  alt={item.alt}
+                  src={item.image}
+                  className="w-full h-96 object-cover"
+                  width={600}
+                  height={600}
+                />
+              </div>
+            ))}
           </div>
           <div className="flex justify-center w-full py-2 gap-2">
-            <a href="#item1" className="btn btn-xs">
-              1
-            </a>
-            <a href="#item2" className="btn btn-xs">
-              2
-            </a>
-            <a href="#item3" className="btn btn-xs">
-              3
-            </a>
-            <a href="#item4" className="btn btn-xs">
-              4
-            </a>
+            {carouselData.map((item, index) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`btn btn-xs ${
+                  index === activeIndex ? "btn-active" : ""
+                }`}
+                onClick={() => setActiveIndex(index)}
+              >
+                {item.id.substring(4)} {/* Extracting the number from the id */}
+              </a>
+            ))}
           </div>
         </div>
+        {/* Add more carousel sections as needed */}
       </div>
     </>
   );
 };
 
-export default carousel;
+export default Carousel;
