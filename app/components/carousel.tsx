@@ -23,21 +23,22 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 5000); // Change 5000 to your desired autoplay interval
+    const intervalId = setInterval(nextSlide, 5000);
 
-    return () => clearInterval(intervalId); // Cleanup on component unmount
+    return () => clearInterval(intervalId);
   }, [activeIndex]);
 
   return (
     <>
       <div className="flex">
         <div className="w-full">
-          <div className="carousel carousel-center p-4 space-x-4">
+          <div className="carousel w-full">
             {carouselData.map((item, index) => (
               <div
                 key={item.id}
-                className={`carousel-item w-full ${
-                  index === activeIndex ? "active" : ""
+                id={`slide${index + 1}`}
+                className={`carousel-item relative w-full ${
+                  index === activeIndex ? "visible" : "hidden"
                 }`}
               >
                 <Image
@@ -60,12 +61,11 @@ const Carousel = () => {
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
-                {item.id.substring(4)} {/* Extracting the number from the id */}
+                {item.id.substring(4)}
               </a>
             ))}
           </div>
         </div>
-        {/* Add more carousel sections as needed */}
       </div>
     </>
   );

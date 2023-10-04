@@ -6,6 +6,7 @@ import Footer from "@/app/components/footer";
 import Multiplebuttons from "@/app/components/multiplebuttons";
 import Categories from "@/app/components/categories";
 import ProdCategories from "@/app/components/prodCategories";
+import CarouselArrow from "@/app/components/carouselarrow";
 
 export default function Home() {
   return (
@@ -16,9 +17,14 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <div className="flex">
-            <Carousel />
-            <Carousel />
+          <CarouselArrow />
+          <div className="flex py-10">
+            <div className="box px-10">
+              <Carousel />
+            </div>
+            <div className="box px-10">
+              <Carousel />
+            </div>
           </div>
         </div>
       </section>

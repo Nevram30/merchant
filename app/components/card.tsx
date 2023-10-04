@@ -22,7 +22,6 @@ const products: Product[] = [
     width: 600,
     height: 600,
   },
-  // Add more product entries as needed
   {
     id: "2",
     name: "Product 2",
@@ -68,7 +67,6 @@ const products: Product[] = [
     width: 600,
     height: 600,
   },
-  // Add more product entries as needed
   {
     id: "2",
     name: "Product 2",
@@ -122,10 +120,10 @@ const Card = () => {
             />
           </figure>
           <div className="card-body p-4">
-            <h2 className="card-title text-xl font-bold mb-2">
+            <h2 className="card-title font-bold text-lg mb-2">
               {product.name}
             </h2>
-            <p className="text-gray-600">{product.description}</p>
+            <p className="text-gray-600 text-sm">{product.description}</p>
             <p>{product.value}</p>
           </div>
         </div>

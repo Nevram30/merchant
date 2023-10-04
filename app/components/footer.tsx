@@ -44,7 +44,7 @@ const footer = (props: Props) => {
         </fieldset>
       </form>
       <div>
-        © 2021 Copyright: <strong>Merchant</strong>. All Rights Reserved.
+        © 2021 Copyright: <strong>Merchant</strong>All Rights Reserved.
       </div>
     </footer>
   );
