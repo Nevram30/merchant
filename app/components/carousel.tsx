@@ -53,6 +53,7 @@ const Carousel = () => {
           </div>
           <div className="flex justify-center w-full py-2 gap-2">
             {carouselData.map((item, index) => (
+              
               <a
                 key={item.id}
                 href={`#${item.id}`}

@@ -11,7 +11,7 @@ import CarouselArrow from "@/app/components/carouselarrow";
 export default function Home() {
   return (
     <main>
-      <section>
+      <section className="relative z-10">
         <Navbar />
         <Subnavbar />
       </section>
