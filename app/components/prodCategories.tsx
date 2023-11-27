@@ -9,45 +9,45 @@ type prodCategories = {
 };
 
 const prodCategoriesData: prodCategories[] = [
-  { id: "coins", name: "Coins", icon: "/coin.png", width: 30, height: 30 },
+  { id: "coins", name: "Men's shoes", icon: "/coin.png", width: 30, height: 30 },
   {
     id: "merchantMall",
-    name: "Merchant Mall",
+    name: "Women's shoes",
     icon: "/online-shopping.png",
     width: 30,
     height: 30,
   },
   {
     id: "claimVouchers",
-    name: "Claim Vouchers",
+    name: "Home & Living",
     icon: "/voucher.png",
     width: 30,
     height: 30,
   },
   {
     id: "promos",
-    name: "Promos",
+    name: "Men's Apparel",
     icon: "/promo.png",
     width: 30,
     height: 30,
   },
   {
     id: "freshSales",
-    name: "Fresh Sales",
+    name: "Women's Apparel",
     icon: "/sale-tag.png",
     width: 30,
     height: 30,
   },
   {
     id: "freshSales",
-    name: "Fresh Sales",
+    name: "Sports",
     icon: "/sale-tag.png",
     width: 30,
     height: 30,
   },
   {
     id: "freshSales",
-    name: "Fresh Sales",
+    name: "Kids",
     icon: "/sale-tag.png",
     width: 30,
     height: 30,
@@ -56,22 +56,27 @@ const prodCategoriesData: prodCategories[] = [
 
 const prodCategories = () => {
   return (
-    <div className="ml-5 space-x-5 my-10">
-      {prodCategoriesData.map((products) => (
-        <button key={products.id} className="btn btn-active h-10">
-          <div>
-            <Image
-              alt={products.name}
-              src={products.icon}
-              className="object-cover"
-              width={products.width}
-              height={products.height}
-            />
-          </div>
-          <p>{products.name}</p>
-        </button>
-      ))}
-    </div>
+    <>
+      <div className="pl-5 pt-10 pb-3">
+        <h1>Categories</h1>
+      </div>
+      <div className="pl-5 space-x-5 pb-10">
+        {prodCategoriesData.map((products) => (
+          <button key={products.id} className="btn btn-active h-10">
+            <div>
+              <Image
+                alt={products.name}
+                src={products.icon}
+                className="object-cover"
+                width={products.width}
+                height={products.height}
+              />
+            </div>
+            <p>{products.name}</p>
+          </button>
+        ))}
+      </div>
+    </>
   );
 };
 

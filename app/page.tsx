@@ -3,7 +3,6 @@ import Card from "@/app/components/card";
 import Carousel from "@/app/components/carousel";
 import Subnavbar from "@/app/components/subnavbar";
 import Footer from "@/app/components/footer";
-import Multiplebuttons from "@/app/components/multiplebuttons";
 import Categories from "@/app/components/categories";
 import ProdCategories from "@/app/components/prodCategories";
 import CarouselArrow from "@/app/components/carouselarrow";
@@ -11,18 +10,18 @@ import CarouselArrow from "@/app/components/carouselarrow";
 export default function Home() {
   return (
     <main>
-      <section className="relative z-10">
+      <main className="fixed w-full z-10">
         <Navbar />
         <Subnavbar />
-      </section>
-      <section>
-        <div>
+      </main>
+      <section className="py-10">
+        <div className="box mt-28">
           <CarouselArrow />
           <div className="flex py-10">
             <div className="box px-10">
               <Carousel />
             </div>
-            <div className="box px-10">
+            <div className="box px-10 ml-5">
               <Carousel />
             </div>
           </div>
@@ -39,9 +38,6 @@ export default function Home() {
       <section>
         <Card />
       </section>
-      <div>
-        <Multiplebuttons />
-      </div>
       <Footer />
     </main>
   );
