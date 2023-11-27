@@ -5,7 +5,7 @@ type SearchInputProps = {
   onSearch: (query: string) => void;
 };
 
-const inputSearch: React.FC<SearchInputProps> = ({ onSearch }) => {
+const InputSearch: React.FC<SearchInputProps> = ({ onSearch }) => {
   const [query, setQuery] = useState<string>("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,4 +28,4 @@ const inputSearch: React.FC<SearchInputProps> = ({ onSearch }) => {
   );
 };
 
-export default inputSearch;
+export default InputSearch;

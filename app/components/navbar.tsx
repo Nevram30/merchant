@@ -7,7 +7,7 @@ import Image from "next/image";
 
 type Props = {};
 
-const navbar = () => {
+const Navbar = () => {
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false);
 
   const handleSearchIconClick = () => {
@@ -117,4 +117,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
