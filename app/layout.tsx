@@ -19,6 +19,7 @@ export default function RootLayout({
   const pathname: string = usePathname() || "";
   const shouldRenderFooter = !["/404", "\\404", "404"].includes(pathname);
 
+  console.log("shouldRenderFooter", shouldRenderFooter)
   if (!shouldRenderFooter) {
     // eslint-disable-next-line react/no-children-prop
     return <NotFoundLayout children={children} />;

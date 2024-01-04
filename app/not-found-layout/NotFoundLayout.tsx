@@ -13,14 +13,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en">
-      <main className="fixed w-full z-10">
-        <Navbar />
-        <Subnavbar />
-      </main>
-      <body>{children}</body>
+      <body>
+        <main className="fixed w-full z-10">
+          <Navbar />
+          <Subnavbar />
+        </main>
+        <div>{children}</div>
+      </body>
     </html>
   );
 }
