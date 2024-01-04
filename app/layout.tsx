@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import Subnavbar from "./components/subnavbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import NotFoundLayout from "./not-found-layout/NotFoundLayout";
 
 export const metadata: Metadata = {
@@ -16,23 +16,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  const pathname: string = usePathname() || '';
-  const shouldRenderFooter = !['/404', '\\404', '404'].includes(pathname);
+  const pathname: string = usePathname() || "";
+  const shouldRenderFooter = !["/404", "\\404", "404"].includes(pathname);
 
   if (!shouldRenderFooter) {
     // eslint-disable-next-line react/no-children-prop
-    return <NotFoundLayout children={children}/>;
+    return <NotFoundLayout children={children} />;
   }
-  
+
   return (
     <html lang="en">
-      <main className="fixed w-full z-10">
-        <Navbar />
-        <Subnavbar />
-      </main>
-      <body>{children}</body>
-      <Footer />
+      <body>
+        <main className="fixed w-full z-10">
+          <Navbar />
+          <Subnavbar />
+        </main>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
