@@ -2,211 +2,21 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Seemore from "./seemore";
-
-type Product = {
-  id: string;
-  name: string;
-  description: string;
-  value: string;
-  image: string;
-  width: number;
-  height: number;
-};
-
-const products: Product[] = [
-  {
-    id: "1",
-    name: "Shoes",
-    description: "If a dog chews shoes whose shoes does he choose?",
-    image: "/product-1.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "Description for Product 2",
-    image: "/product-2.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "1",
-    name: "Shoes",
-    description: "If a dog chews shoes whose shoes does he choose?",
-    image: "/product-1.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "Description for Product 2",
-    image: "/product-2.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "1",
-    name: "Shoes",
-    description: "If a dog chews shoes whose shoes does he choose?",
-    image: "/product-1.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "Description for Product 2",
-    image: "/product-2.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "1",
-    name: "Shoes",
-    description: "If a dog chews shoes whose shoes does he choose?",
-    image: "/product-1.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "Description for Product 2",
-    image: "/product-2.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "Description for Product 3",
-    image: "/product-3.jpg",
-    value: "P100",
-    width: 600,
-    height: 600,
-  },
-];
+import { products } from "../data/carddata";
 
 const Card = () => {
-  const [visibleProducts, setVisibleProducts] = useState(10); // Number of products to display initially
+
+  const [visibleProducts, setVisibleProducts] = useState(10); 
+
   const loadMore = () => {
-    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 5); // Increase the number of visible products
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 5);
   };
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 mx-5">
         {products.slice(0, visibleProducts).map((product) => (
-          <div key={product.id} className="w-full bg-base-100 shadow-xl">
+          <div key={product.id} className="w-full rounded-lg bg-base-100 shadow-xl">
             <figure>
               <Image
                 alt={product.name}
